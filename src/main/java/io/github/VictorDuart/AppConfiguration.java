@@ -5,11 +5,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-@Configuration
-@Profile("dev")
+@Development
 public class AppConfiguration {
 
-    @Bean(name = "applicationName")
+    @Bean
     public CommandLineRunner execute(){
         return args -> {
             System.out.println("Rodando config dev");
